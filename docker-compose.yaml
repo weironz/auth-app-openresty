@@ -1,0 +1,18 @@
+name: "auth-app"
+
+services:
+  auth:
+    build:
+      context: ./auth_service
+    container_name: auth_service
+    ports:
+      - "5000:5000"
+
+  gateway:
+    build:
+      context: ./openresty
+    container_name: openresty_gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - auth
