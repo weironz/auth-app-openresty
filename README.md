@@ -102,11 +102,3 @@ curl -H "X-Auth-Id: <token-from-login>" http://localhost:5000/authen
 
 - 演示用途：token 存放在内存中且没有持久化，不适合多实例部署。
 - 未实现认证（登录）逻辑，仅根据 username 颁发 token；请在真实系统中接入密码验证/第三方登录等机制。
-
-## 许可证
-
-本仓库示例以 MIT 许可证示例说明（可根据需要替换）。
-
----
-
-欲了解更多或需要我把 README 翻译为英文、扩展为具体的 OpenResty 示例配置（例如通过 lua-resty-http 调用鉴权接口并基于返回结果允许/拒绝请求），可以继续告诉我。
